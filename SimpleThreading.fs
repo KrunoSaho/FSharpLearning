@@ -2,7 +2,7 @@ type Comms = System.Collections.Concurrent.ConcurrentQueue<string>
 
 let printer (object: obj) =
     let myChan, otherChan, msgToSend = object :?> Comms*Comms*string
-    let mutable value = ref ""
+    let value = ref ""
     
     let rng = System.Random()
     let dataRanges = [100..200..1000]
